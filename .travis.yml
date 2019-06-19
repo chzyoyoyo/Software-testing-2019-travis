@@ -1,9 +1,6 @@
 language: java
 
-os:
-  - linux
-dist:
-  - trusty
+dist: trusty
 jdk:
   - oraclejdk9
 addons:
