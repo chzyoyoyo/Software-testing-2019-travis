@@ -1,25 +1,9 @@
+# Virtualization environments
+dist: bionic
+
+# Language to test
 language: java
 
-dist: trusty
+# JDK Version
 jdk:
-  - oraclejdk9
-addons:
-  apt:
-    packages:
-    - junit4
-    - libmockito-java
-script:
-  - make -C stubLW clean
-  - make -C stubLW compileTest
-  - make -C stubLW runCov
-  - make -C stubLW calCov
-  - make -C deposit clean
-  - make -C deposit compileTest
-  - make -C deposit runCov
-  - make -C deposit calCov
-branches:
-  only:
-    - master
-    - ans
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - openjdk11
